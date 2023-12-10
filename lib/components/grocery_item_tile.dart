@@ -23,7 +23,15 @@ class GroceryItemTile extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
-          color: color[100],
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.3),
+              spreadRadius: 1,
+              blurRadius: 5,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -43,12 +51,14 @@ class GroceryItemTile extends StatelessWidget {
               itemName,
               style: TextStyle(
                 fontSize: 16,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),
             ),
 
             MaterialButton(
               onPressed: onPressed,
-              color: color,
+              color: Colors.orangeAccent,
               child: Text(
                 '\₱' + itemPrice,
                 style: TextStyle(

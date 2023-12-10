@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'home_page.dart';
 
 class IntroScreen extends StatelessWidget {
-  const IntroScreen({super.key});
+  const IntroScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

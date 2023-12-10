@@ -6,7 +6,7 @@ import '../model/cart_model.dart';
 import 'cart_page.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -17,20 +17,21 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.orangeAccent,
         elevation: 0,
         leading: Padding(
           padding: const EdgeInsets.only(left: 24.0),
           child: Icon(
             Icons.location_on,
-            color: Colors.grey[700],
+            color: Colors.white,
           ),
         ),
         title: Text(
           'Baguio, Philippines',
           style: TextStyle(
-            fontSize: 16,
-            color: Colors.grey[700],
+            fontSize: 20,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
           ),
         ),
         centerTitle: false,
@@ -40,19 +41,19 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                color: Colors.grey[200],
+                color: Colors.white,
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Icon(
                 Icons.person,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.orangeAccent,
         onPressed: () => Navigator.push(
           context,
           MaterialPageRoute(
@@ -71,7 +72,13 @@ class _HomePageState extends State<HomePage> {
           // good morning bro
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 24.0),
-            child: Text('Good morning,'),
+            child: Text(
+              'Hello there,',
+              style: TextStyle(
+                fontSize: 18,
+                color: Colors.grey,
+              ),
+            ),
           ),
 
           const SizedBox(height: 4),
@@ -80,10 +87,11 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: Text(
-              "Let's order fresh items for you",
+              "Discover fresh items for you",
               style: GoogleFonts.notoSerif(
                 fontSize: 36,
                 fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),
             ),
           ),
@@ -101,10 +109,11 @@ class _HomePageState extends State<HomePage> {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24.0),
             child: Text(
-              "Fresh Items",
+              "Explore Categories",
               style: GoogleFonts.notoSerif(
-                //fontWeight: FontWeight.bold,
                 fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),
             ),
           ),
